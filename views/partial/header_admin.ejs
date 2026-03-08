@@ -1,0 +1,24 @@
+<header class="header">
+    <a href="/admin" class="header_logo">Admin Panel</a>
+    <nav class="header__nav">
+        <ul>
+            
+            <li>
+                <a href="/" >Home</a>
+            </li>
+            <li>
+                <a href="/about" >About</a>
+            </li>
+            <li>
+                <a href="/contact" >Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <% if (token) { %>
+       
+    <div class="header__button">
+        <!-- <button id="logoutBtn">Logout</button> -->
+        <a href="/admin/logout" id="logoutBtn">Logout</a>
+    </div>
+    <% } %>
+</header>

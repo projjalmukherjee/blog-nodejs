@@ -1,0 +1,34 @@
+<div class="author">
+    <h1 class="author__heading">Welcome to My Blog</h1>
+    <p class="author_body">This is a simple blog built with Node.js and
+        Express.</p>
+</div>
+<img
+    src="/img/hero-image.webp"
+    alt="Blog Image"
+    class="hero-image"
+    width="981"
+    height="528">
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date">Written by <%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+    
+         <div style="display:flex; justify-content: space-between; margin-top: 20px;">
+        <% if(hasnext) { %> 
+        <a href="/?page=<%= parseInt(page) + 1 %>" class="pagination">View Older Post</a>
+        <% }  %>
+        <% if(hasprev) { %> 
+        <a href="/?page=<%= parseInt(page) - 1 %>" class="pagination">View Newer Post</a>
+        <% }  %>
+         </div>
+    
+</section>
