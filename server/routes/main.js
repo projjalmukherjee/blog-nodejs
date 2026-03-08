@@ -155,4 +155,12 @@ mainrouter.get('/about',(req,res)=>{
     res.render('about',{local,req});
 });
 
+mainrouter.get('/contact',(req,res)=>{
+    const local = {
+        title:"Contact",
+        description:"This is the contact page of our blog website"
+    }
+    res.render('contact',{local,req});
+});
+
 export {mainrouter};
