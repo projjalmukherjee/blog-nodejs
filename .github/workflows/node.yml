@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout code to server
+        uses: actions/checkout@v3
 
-    - name: Use Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      - name: Use Node in server
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - run: npm install
-    - run: npm test
+      - run: npm install
+      - run: npm test
