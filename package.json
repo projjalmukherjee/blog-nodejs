@@ -4,7 +4,7 @@
   "main": "index.js",
   "type":"module",
     "scripts": {
-    "test": "test echo \"No tests yet\"",
+    "test": "echo \"No tests yet\"",
     "start":"node app.js",
     "dev":"nodemon app.js"
    
